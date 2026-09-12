@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?
+family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+.cr-page {
+min-height: 100vh;
+background: #171b22;
+color: #e7e4da;
+font-family: 'IBM Plex Sans'
+, sans-serif;
+padding: 2.5rem clamp(1.25rem, 5vw, 4rem);
+}
+.cr-header {
+margin-bottom: 2rem;
+}
+.cr-header--detail {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 1rem;
+flex-wrap: wrap;
+}
+.cr-header h1 {
+font-family: 'Source Serif 4'
+, serif;
+font-weight: 600;
+font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+margin: 0 0 0.35rem;
+color: #f4f1e8;
+}
+.cr-subhead {
+color: #9aa0ac;
+margin: 0;
+max-width: 60ch;
+line-height: 1.5;
+}
+.cr-back {
+display: inline-block;
+color: #b8bcc4;
+text-decoration: none;
+font-size: 0.9rem;
+margin-bottom: 1.5rem;
+}
+.cr-back:hover {
+color: #f4f1e8;
+}
+.cr-empty {
+color: #b8bcc4;
+}
+.cr-empty a {
+color: #e7e4da;
+}
+/* Summary row */
+.cr-summary {
+display: flex;
+gap: 1rem;
+margin-bottom: 2rem;
+flex-wrap: wrap;
+}
+.cr-stat {
+flex: 1 1 140px;
+border-radius: 4px;
+padding: 0.9rem 1.1rem;
+border: 1px solid #2b313c;
+background: #1c2129;
+display: flex;
+flex-direction: column;
+gap: 0.15rem;
+}
+}
+.cr-stat-value {
+font-family: 'Source Serif 4'
+font-size: 1.7rem;
+color: #f4f1e8;
+, serif;
+.cr-stat-label {
+font-size: 0.82rem;
+color: #9aa0ac;
+}
+.cr-stat--compliant {
+border-left: 3px solid #3e7a5a;
+}
+.cr-stat--flagged {
+border-left: 3px solid #b5722a;
+}
+.cr-stat--pending {
+border-left: 3px solid #8b8368;
+}
+/* Document grid (paper cards on a dark desk) */
+.cr-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 1rem;
+}
+.cr-card {
+background: #efeae0;
+color: #21262e;
+border-radius: 3px;
+padding: 1.1rem 1.2rem;
+text-decoration: none;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+border: 1px solid #d8d0bc;
+transition: transform 0.15s ease;
+}
+.cr-card:hover {
+transform: translateY(-2px);
+}
+.cr-card-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 0.5rem;
+}
+.cr-doctype {
+font-size: 0.78rem;
+color: #6b6455;
+}
+.cr-filename {
+font-family: 'Source Serif 4'
+font-size: 1.05rem;
+margin: 0;
+word-break: break-word;
+, serif;
+}
+.cr-meta {
+font-size: 0.8rem;
+color: #6b6455;
+margin: 0;
+}
+/* Detail view */
+.cr-detail-grid {
+display: grid;
+grid-template-columns: 1.2fr 1fr;
+gap: 1.25rem;
+}
+@media (max-width: 760px) {
+.cr-detail-grid {
+grid-template-columns: 1fr;
+}
+}
+.cr-panel {
+background: #1c2129;
+border: 1px solid #2b313c;
+border-radius: 4px;
+padding: 1.5rem;
+}
+.cr-panel--paper {
+background: #efeae0;
+color: #21262e;
+border-color: #d8d0bc;
+}
+.cr-panel h2 {
+font-family: 'Source Serif 4'
+font-size: 1.15rem;
+margin: 0 0 0.75rem;
+}
+, serif;
+.cr-panel--paper h2,
+.cr-panel--paper h3 {
+color: #21262e;
+}
+.cr-panel h3 {
+font-size: 0.95rem;
+margin: 1.25rem 0 0.5rem;
+color: #f4f1e8;
+}
+.cr-confidence {
+font-size: 0.82rem;
+color: #6b6455;
+margin: 0 0 0.75rem;
+}
+.cr-rawtext {
+background: #e4ddc9;
+border: 1px solid #d8d0bc;
+border-radius: 3px;
+padding: 0.9rem 1rem;
+font-family: 'IBM Plex Sans'
+font-size: 0.85rem;
+line-height: 1.55;
+white-space: pre-wrap;
+word-break: break-word;
+margin: 0;
+}
+.cr-fields {
+margin: 0.5rem 0 0;
+}
+.cr-field-row {
+display: flex;
+justify-content: space-between;
+gap: 1rem;
+padding: 0.4rem 0;
+border-bottom: 1px solid #ddd5be;
+font-size: 0.88rem;
+, sans-serif;
+}
+.cr-field-row dt {
+color: #6b6455;
+}
+.cr-field-row dd {
+margin: 0;
+font-weight: 500;
+text-align: right;
+}
+/* Detected object tags */
+.cr-tags {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin: 0 0 1.5rem;
+padding: 0;
+}
+.cr-tag {
+background: #262c36;
+border: 1px solid #363d49;
+border-radius: 3px;
+padding: 0.35rem 0.7rem;
+font-size: 0.82rem;
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.cr-tag-confidence {
+color: #8890a0;
+font-size: 0.76rem;
+}
+/* Compliance checks */
+.cr-checks {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+gap: 0.7rem;
+}
+.cr-check {
+display: flex;
+gap: 0.65rem;
+align-items: flex-start;
+}
+.cr-check-mark {
+flex-shrink: 0;
+width: 1.4rem;
+height: 1.4rem;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.8rem;
+margin-top: 0.1rem;
+}
+.cr-check--pass .cr-check-mark {
+background: #21402f;
+color: #7fcba0;
+}
+.cr-check--fail .cr-check-mark {
+background: #402620;
+color: #e0917f;
+}
+.cr-check-rule {
+margin: 0;
+font-size: 0.9rem;
+}
+.cr-check-note {
+margin: 0.2rem 0 0;
+font-size: 0.8rem;
+color: #9aa0ac;
+}
